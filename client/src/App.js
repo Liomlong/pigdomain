@@ -1,16 +1,18 @@
 import React from 'react';
-import Header from './components/Header';
-import TonConnect from './components/TonConnectButton';
-import { TonConnectUIProvider } from '@tonconnect/ui-react';
+import tonConnectUI from './ton/TonConnect';
+import { sendMessage } from './TelegramBot';
 
 function App() {
+    const handleConnect = () => {
+        tonConnectUI.connect();
+        sendMessage("User connected with TON Wallet");
+    };
+
     return (
-        <TonConnectUIProvider manifestUrl="https://www.pig.tg/tonconnect-manifest.json">
-            <div className="App">
-                <Header />
-                <TonConnect />
-            </div>
-        </TonConnectUIProvider>
+        <div className="App">
+            <h1>Welcome to PigDomain</h1>
+            <button onClick={handleConnect}>Connect Wallet</button>
+        </div>
     );
 }
 
