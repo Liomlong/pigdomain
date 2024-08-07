@@ -1,0 +1,8 @@
+{
+  "name": "PigDomain",
+  "description": "Connect to PigDomain",
+  "url": "https://www.pig.tg",
+  "icons": ["https://www.pig.tg/icon.png"],
+  "bridgeUrl": "https://bridge.tonconnect.org"
+}
+
